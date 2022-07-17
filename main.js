@@ -499,6 +499,7 @@ window.onload = () => {
         pickUp.setVolume(2.0);
         const newOrder = new THREE.Audio(listener);
         newOrder.setBuffer(await AssetManager.loadAudioAsync("newOrder.wav"));
+        document.getElementById("loading").remove();
 
         function animate() {
             document.getElementById("score").innerHTML = `Score: ${score}`;
